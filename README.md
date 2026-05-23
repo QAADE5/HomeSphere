@@ -1,2 +1,0 @@
-# HomeSphere
-HomeSphere
