@@ -40,3 +40,7 @@ flowchart LR
     SP --> JOIN
     JOIN --> GR
 ```
+
+---
+
+Mermaid docs: https://emersonbottero.github.io/mermaid-docs/syntax/flowchart.html
