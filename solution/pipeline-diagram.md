@@ -1,4 +1,4 @@
-# HomeSphere Pipeline - Solution Diagram
+# HomeSphere Pipeline - Diagram
 
 ```mermaid
 flowchart TB
