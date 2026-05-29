@@ -1,9 +1,7 @@
 # HomeSphere Pipeline - Solution Diagram
 
-*The completed medallion architecture after Day 3.*
-
 ```mermaid
-flowchart LR
+flowchart TB
     subgraph SRC["Sources"]
         CSV["sales_raw.csv"]
         JSON["products_raw.json"]
