@@ -2,7 +2,7 @@
 
 ```mermaid
 flowchart LR
-    subgraph SRC("Sources")
+    subgraph SRC["Sources"]
         CSV["sales_raw.csv"]
         JSON["products_raw.json"]
     end
@@ -41,6 +41,3 @@ flowchart LR
     JOIN --> GR
 ```
 
----
-
-Mermaid docs: https://emersonbottero.github.io/mermaid-docs/syntax/flowchart.html
