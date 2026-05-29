@@ -2,7 +2,7 @@
 
 ```mermaid
 flowchart LR
-    subgraph SRC["Sources"]
+    subgraph SRC("Sources")
         CSV["sales_raw.csv"]
         JSON["products_raw.json"]
     end
