@@ -1,33 +1,33 @@
 # HomeSphere Pipeline - Solution Diagram
 
 ```mermaid
-flowchart LR
+flowchart TB
     subgraph SRC["Sources"]
-        CSV["sales_raw.csv"]
-        JSON["products_raw.json"]
+        CSV("sales_raw.csv")
+        JSON("products_raw.json")
     end
 
     subgraph BRZ["Bronze - raw, untouched"]
-        BCSV["Files/bronze/\nsales_raw.csv"]
-        BJSON["Files/bronze/\nproducts_raw.json"]
+        BCSV("Files/bronze/\nsales_raw.csv")
+        BJSON("Files/bronze/\nproducts_raw.json")
     end
 
     subgraph NB1["Notebook: Bronze to Silver"]
-        CLEAN["clean + validate\n(strip £, parse dates,\ndrop bad rows, assert checks)"]
-        FLAT["flatten JSON\n(json_normalize)"]
+        CLEAN[["clean + validate\n(strip £, parse dates,\ndrop bad rows, assert checks)"]]
+        FLAT[["flatten JSON\n(json_normalize)"]]
     end
 
     subgraph SIL["Silver - cleaned & trusted"]
-        SS["silver_sales"]
-        SP["silver_products"]
+        SS[("silver_sales")]
+        SP[("silver_products")]
     end
 
     subgraph NB2["Notebook: Silver to Gold"]
-        JOIN["join on product_id\ncompute line_value"]
+        JOIN[["join on product_id\ncompute line_value"]]
     end
 
     subgraph GLD["Gold - business-ready"]
-        GR["gold_revenue\n(revenue by category)"]
+        GR[("gold_revenue\n(revenue by category)")]
     end
 
     CSV --> BCSV
